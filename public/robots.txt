@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shadeed2004-gif.github.io/sitemap.xml
