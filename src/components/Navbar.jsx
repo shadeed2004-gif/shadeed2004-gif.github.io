@@ -51,8 +51,17 @@ export default function Navbar({ onOpenCommandPalette }) {
         : 'bg-transparent py-5'
     }`}>
       <div className="max-w-[1140px] mx-auto px-6 flex items-center justify-between">
-        {/* Brand Logo */}
-        <Link to="/" className="flex items-center group min-h-[44px]">
+        {/* Brand Logo - Go Back to Home */}
+        <Link 
+          to="/" 
+          onClick={() => {
+            if (location.pathname === '/') {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
+          className="flex items-center group min-h-[44px]"
+          title="Go to Home"
+        >
           <img 
             src="/shadeed-logo.png" 
             alt="shadeed." 

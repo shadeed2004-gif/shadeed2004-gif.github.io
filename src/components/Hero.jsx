@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download, MapPin, Cpu, Activity, ShieldAlert } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -18,7 +18,7 @@ export default function Hero() {
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2.5 bg-white border border-border-strong px-3.5 py-1.5 rounded-full w-fit mb-6 shadow-sm">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald animate-pulse"></span>
-            <span className="text-xs font-mono text-ink font-medium">Open to Embedded & Systems Roles</span>
+            <span className="text-xs font-mono text-ink font-medium">Open to Embedded &amp; Systems Roles</span>
           </div>
 
           <div className="text-xs font-mono text-primary-hover font-semibold uppercase tracking-widest mb-3 flex items-center gap-2">
@@ -38,8 +38,8 @@ export default function Hero() {
             I engineer hardware-software pipelines — combining micro‑controller telemetry, cloud REST APIs, and firmware to convert noisy real‑world signals into actionable intelligence. B.Tech Computer Science (Data Science) student at Mar Athanasius College of Engineering.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 mb-10">
+          {/* CTA Buttons & Social Profile Links */}
+          <div className="flex flex-wrap items-center gap-4">
             <Link
               to="/projects/waveguard"
               className="inline-flex items-center gap-2 font-sans text-sm font-semibold bg-primary text-ink px-6 py-3.5 rounded-xl hover:bg-primary-hover transition-all shadow-md hover:-translate-y-0.5"
@@ -57,36 +57,29 @@ export default function Hero() {
               <Download className="w-4 h-4" />
               <span>Download Resume</span>
             </a>
-          </div>
 
-          {/* Hero Concrete Engineering Metrics */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-border">
-            <div className="flex flex-col">
-              <span className="text-[11px] font-mono text-text-faint uppercase tracking-wider flex items-center gap-1 font-semibold">
-                <MapPin className="w-3 h-3 text-primary" /> Location
-              </span>
-              <span className="text-sm font-semibold text-ink mt-1">Kerala, IN</span>
-            </div>
+            <div className="flex items-center gap-2.5">
+              <a
+                href="https://github.com/shadeed2004-gif"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-border-strong text-ink hover:border-primary hover:text-primary-hover transition-all shadow-sm hover:-translate-y-0.5 flex items-center justify-center min-w-[44px] min-h-[44px]"
+                aria-label="GitHub Profile"
+                title="GitHub Profile"
+              >
+                <Github className="w-5 h-5" />
+              </a>
 
-            <div className="flex flex-col">
-              <span className="text-[11px] font-mono text-text-faint uppercase tracking-wider flex items-center gap-1 font-semibold">
-                <Cpu className="w-3 h-3 text-primary" /> Hardware
-              </span>
-              <span className="text-sm font-semibold text-ink mt-1">ESP32 · I²C · UART</span>
-            </div>
-
-            <div className="flex flex-col">
-              <span className="text-[11px] font-mono text-text-faint uppercase tracking-wider flex items-center gap-1 font-semibold">
-                <Activity className="w-3 h-3 text-primary" /> Telemetry
-              </span>
-              <span className="text-sm font-semibold text-ink mt-1">10Hz Continuous</span>
-            </div>
-
-            <div className="flex flex-col">
-              <span className="text-[11px] font-mono text-text-faint uppercase tracking-wider flex items-center gap-1 font-semibold">
-                <ShieldAlert className="w-3 h-3 text-primary" /> Alerting
-              </span>
-              <span className="text-sm font-semibold text-ink mt-1">SIM800L Direct SMS</span>
+              <a
+                href="https://www.linkedin.com/in/mohammed-shadeed-p"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-border-strong text-ink hover:border-primary hover:text-primary-hover transition-all shadow-sm hover:-translate-y-0.5 flex items-center justify-center min-w-[44px] min-h-[44px]"
+                aria-label="LinkedIn Profile"
+                title="LinkedIn Profile"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </motion.div>
