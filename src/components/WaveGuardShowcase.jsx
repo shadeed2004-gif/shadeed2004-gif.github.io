@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Star, Clock, ArrowRightLeft, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Star, Clock, ArrowRightLeft, ShieldCheck } from 'lucide-react';
 import { projectsData } from '../data/projects';
 
 export default function WaveGuardShowcase() {

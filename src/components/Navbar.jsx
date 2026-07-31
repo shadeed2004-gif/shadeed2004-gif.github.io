@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Command, FileText, Activity } from 'lucide-react';
+import { Menu, X, Command, FileText } from 'lucide-react';
 
 export default function Navbar({ onOpenCommandPalette }) {
   const [scrolled, setScrolled] = useState(false);
@@ -73,7 +73,7 @@ export default function Navbar({ onOpenCommandPalette }) {
           <img 
             src="/shadeed-logo.png" 
             alt="shadeed." 
-            className="h-10 w-auto object-contain mix-blend-multiply transition-transform group-hover:scale-[1.02]"
+            className="h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
           />
         </Link>
 

@@ -13,7 +13,7 @@ export default function Certifications() {
       badge: "Industry Simulation",
       title: "Tata Data Analytics",
       issuer: "Tata Group",
-      detail: "Hands-on job simulation applying generative analytics to enterprise business intelligence and data processing workflows."
+      detail: "Hands-on job simulation applying data-driven analytics to enterprise business intelligence and data processing workflows."
     },
     {
       badge: "Industry Simulation",

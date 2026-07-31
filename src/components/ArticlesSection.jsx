@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { articlesData } from '../data/writing';
 import { Link } from 'react-router-dom';
 

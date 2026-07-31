@@ -4,19 +4,6 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --bg-main: #f9f7f3;
-    --bg-soft: #f2efe8;
-    --bg-panel: #ffffff;
-    --bg-panel2: #f3f0ea;
-    --border-color: rgba(31, 32, 38, 0.09);
-    --border-strong: rgba(31, 32, 38, 0.18);
-    --text-main: #1f2026;
-    --text-muted: #5e584d;
-    --accent: #f19e01;
-    --accent-hover: #c97f00;
-  }
-
   html {
     scroll-behavior: smooth;
     background-color: #f9f7f3;
@@ -90,8 +77,3 @@
   top: 0;
 }
 
-.roboto-custom {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}

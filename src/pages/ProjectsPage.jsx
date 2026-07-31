@@ -30,7 +30,7 @@ export default function ProjectsPage() {
             Product Showcase Index
           </h1>
           <p className="text-text-muted text-lg leading-relaxed">
-            Detailed engineering builds across IoT systems, generative AI insights, and data analytics consulting.
+            Detailed engineering builds across IoT systems, embedded firmware, and data analytics consulting.
           </p>
         </div>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, ExternalLink, Github, CheckCircle2, AlertTriangle, Zap, Activity, Cpu, Layers, HelpCircle, BookOpen } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, CheckCircle2, Zap, Activity, HelpCircle, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 
