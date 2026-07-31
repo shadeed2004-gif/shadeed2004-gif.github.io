@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Download, Github, Linkedin } from 'lucide-react';
 
 export default function Hero() {
+  const [typedText, setTypedText] = useState('');
+  const fullText = "Open to Software Engineering & AI Internships";
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setTypedText(fullText.slice(0, index + 1));
+      index++;
+      if (index >= fullText.length) {
+        clearInterval(interval);
+      }
+    }, 45); // Snappy, clean typing animation speed
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-[92vh] pt-32 pb-16 flex items-center overflow-hidden">
       <div className="max-w-[1140px] mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -17,13 +32,16 @@ export default function Hero() {
         >
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2.5 bg-white border border-border-strong px-3.5 py-1.5 rounded-full w-fit mb-6 shadow-sm">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald animate-pulse"></span>
-            <span className="text-xs font-mono text-ink font-medium">Open to Embedded &amp; Systems Roles</span>
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald animate-pulse flex-shrink-0"></span>
+            <span className="text-xs font-mono text-ink font-medium min-h-[16px] flex items-center">
+              {typedText}
+              <span className="inline-block w-[2px] h-3 bg-primary ml-1 animate-pulse"></span>
+            </span>
           </div>
 
           <div className="text-xs font-mono text-primary-hover font-semibold uppercase tracking-widest mb-3 flex items-center gap-2">
             <span className="w-5 h-[2px] bg-primary"></span>
-            <span>Data Science · Embedded Systems</span>
+            <span>AI • IoT • FULL-STACK ENGINEERING</span>
           </div>
 
           {/* Name Heading */}
