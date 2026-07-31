@@ -52,7 +52,7 @@ export default {
       fontFamily: {
         display: ['Roboto', 'sans-serif'],
         sans: ['Roboto', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        mono: ['Roboto Mono', 'monospace'],
       },
       letterSpacing: {
         tightest: '-0.04em',

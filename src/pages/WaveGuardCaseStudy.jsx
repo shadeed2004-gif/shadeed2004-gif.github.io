@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, ExternalLink, Github, CheckCircle2, AlertTriangle, Zap, Activity, Cpu, Layers, HelpCircle, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projectsData } from '../data/projects';
-import { waveGuardLoop } from '../data/firmwareSnippet';
+
 
 export default function WaveGuardCaseStudy() {
   const waveGuard = projectsData.find(p => p.id === 'waveguard');

@@ -55,7 +55,7 @@ export default function Navbar({ onOpenCommandPalette }) {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform-gpu ${
       scrolled 
-        ? 'bg-bg/92 backdrop-blur-md border-b border-border py-3 shadow-sm' 
+        ? 'bg-bg border-b border-border py-3 shadow-sm' 
         : 'bg-transparent py-5'
     }`}>
       <div className="max-w-[1140px] mx-auto px-6 flex items-center justify-between">
