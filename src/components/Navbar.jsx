@@ -9,25 +9,33 @@ export default function Navbar({ onOpenCommandPalette }) {
   const location = useLocation();
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
 
-      // Track active section on home page
-      if (location.pathname === '/') {
-        const sections = ['home', 'about', 'flagship', 'skills', 'writing', 'certifications', 'contact'];
-        const scrollPos = window.scrollY + 140;
+          // Track active section on home page
+          if (location.pathname === '/') {
+            const sections = ['home', 'about', 'flagship', 'skills', 'writing', 'certifications', 'contact'];
+            const scrollPos = window.scrollY + 140;
 
-        for (const sectionId of sections) {
-          const el = document.getElementById(sectionId);
-          if (el) {
-            const top = el.offsetTop;
-            const height = el.offsetHeight;
-            if (scrollPos >= top && scrollPos < top + height) {
-              setActiveSection(sectionId);
-              break;
+            for (const sectionId of sections) {
+              const el = document.getElementById(sectionId);
+              if (el) {
+                const top = el.offsetTop;
+                const height = el.offsetHeight;
+                if (scrollPos >= top && scrollPos < top + height) {
+                  setActiveSection(sectionId);
+                  break;
+                }
+              }
             }
           }
-        }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -45,7 +53,7 @@ export default function Navbar({ onOpenCommandPalette }) {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform-gpu ${
       scrolled 
         ? 'bg-bg/92 backdrop-blur-md border-b border-border py-3 shadow-sm' 
         : 'bg-transparent py-5'
@@ -65,7 +73,7 @@ export default function Navbar({ onOpenCommandPalette }) {
           <img 
             src="/shadeed-logo.png" 
             alt="shadeed." 
-            className="h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+            className="h-10 w-auto object-contain mix-blend-multiply transition-transform group-hover:scale-[1.02]"
           />
         </Link>
 
