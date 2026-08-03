@@ -71,10 +71,13 @@ export default function WaveGuardShowcase() {
             </div>
 
             {/* Right column */}
-            <div 
-              className="bg-surface-container h-64 lg:h-auto" 
-              style={{ backgroundImage: `url('${waveGuard.images.solobuoy}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-            >
+            <div className="bg-surface-container flex items-center justify-center p-3 sm:p-6 lg:p-0 min-h-[320px] sm:min-h-[400px] lg:min-h-full">
+              <img 
+                src={waveGuard.images.solobuoy} 
+                alt="Mohammed Shadeed P holding the WaveGuard Buoy Prototype" 
+                className="w-full h-full max-h-[520px] object-contain sm:object-cover rounded-xl lg:rounded-none"
+                loading="lazy"
+              />
             </div>
             
           </div>
