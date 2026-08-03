@@ -9,7 +9,7 @@ export default function ContactSection() {
     ];
 
   return (
-    <section id="contact" className="py-24 bg-surface-container-low border-t border-outline-variant/30 relative text-on-surface">
+    <section id="contact" className="py-24 bg-surface-container-low/60 grid-pattern border-t border-outline-variant/30 relative text-on-surface">
       <div className="max-w-[1140px] mx-auto px-6">
         
         <div className="glass-card p-8 sm:p-14 text-center">

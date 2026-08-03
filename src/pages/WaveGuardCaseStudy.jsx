@@ -25,7 +25,7 @@ export default function WaveGuardCaseStudy() {
   const currentTab = galleryTabs.find(t => t.id === activeTab);
 
   return (
-    <main id="content" className="pt-36 pb-24 min-h-screen bg-background">
+    <main id="content" className="pt-36 pb-24 min-h-screen grid-pattern">
       <div className="max-w-[1140px] mx-auto px-6">
         
         {/* Back Link */}

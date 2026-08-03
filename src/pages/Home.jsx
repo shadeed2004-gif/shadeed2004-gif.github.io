@@ -10,7 +10,7 @@ import ContactSection from '../components/ContactSection';
 
 export default function Home() {
   return (
-    <main id="content" className="bg-background text-on-background">
+    <main id="content" className="text-on-background">
       {/* Hero */}
       <Hero />
 
