@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, ExternalLink, Github, CheckCircle2, Zap, Activity, HelpCircle, BookOpen } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projectsData } from '../data/projects';
-
 
 export default function WaveGuardCaseStudy() {
   const waveGuard = projectsData.find(p => p.id === 'waveguard');
@@ -26,35 +25,35 @@ export default function WaveGuardCaseStudy() {
   const currentTab = galleryTabs.find(t => t.id === activeTab);
 
   return (
-    <main id="content" className="pt-28 pb-24 min-h-screen bg-bg">
+    <main id="content" className="pt-28 pb-24 min-h-screen bg-background">
       <div className="max-w-[1140px] mx-auto px-6">
         
         {/* Back Link */}
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-xs font-mono text-text-muted hover:text-primary-hover mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-mono text-on-surface-variant hover:text-primary mb-8 transition-colors"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <span className="material-symbols-outlined text-sm">arrow_back</span>
           <span>Back to Portfolio Overview</span>
         </Link>
 
         {/* Hero Banner */}
-        <div className="bg-gradient-to-br from-white to-bg-panel2 border border-border-strong rounded-3xl p-8 sm:p-12 mb-12 shadow-md text-ink">
+        <div className="bg-gradient-to-br from-surface-container-lowest to-surface-container border border-outline-variant rounded-3xl p-8 sm:p-12 mb-12 shadow-md text-on-surface">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <span className="text-xs font-mono text-primary-hover font-semibold uppercase tracking-wider bg-amber-dim border border-amber/30 px-3 py-1 rounded-full">
+            <span className="text-xs font-mono text-primary font-semibold uppercase tracking-wider bg-amber-100 border border-amber-300 text-amber-700 px-3 py-1 rounded-full">
               Flagship Engineering Case Study
             </span>
-            <span className="text-xs font-mono text-emerald font-semibold bg-emerald-dim border border-emerald/30 px-3 py-1 rounded-full flex items-center gap-2">
+            <span className="text-xs font-mono text-emerald font-semibold bg-emerald/10 border border-emerald/30 px-3 py-1 rounded-full flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald animate-pulse"></span>
               Physical Prototype Built &amp; Tested
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-ink tracking-tightest mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-on-surface tracking-tightest mb-6">
             WaveGuard: Embedded Coastal Early Warning Buoy
           </h1>
 
-          <p className="text-text-muted text-lg sm:text-xl max-w-4xl leading-relaxed mb-8">
+          <p className="text-on-surface-variant text-lg sm:text-xl max-w-4xl leading-relaxed mb-8">
             An autonomous smart buoy &amp; cloud analytics platform designed to detect <em>Kallakkadal</em> (abnormal swell surges) along the Kanayannur coastal zone of Kerala and dispatch instantaneous SMS warnings to fishing communities.
           </p>
 
@@ -63,17 +62,17 @@ export default function WaveGuardCaseStudy() {
               href={waveGuard.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-sans font-semibold bg-primary text-ink px-6 py-3 rounded-xl hover:bg-primary-hover transition-all shadow-sm"
+              className="inline-flex items-center gap-2 text-sm font-sans font-semibold bg-primary-container text-on-primary-container px-6 py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all shadow-sm"
             >
               <span>Visit Live Web Dashboard</span>
-              <ExternalLink className="w-4 h-4" />
+              <span className="material-symbols-outlined text-sm">open_in_new</span>
             </a>
 
             <a
               href={waveGuard.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-mono font-medium bg-white border border-border-strong text-ink px-5 py-3 rounded-xl hover:border-primary hover:text-primary-hover transition-all shadow-sm"
+              className="inline-flex items-center gap-2 text-sm font-mono font-medium bg-surface-container-lowest border border-outline-variant text-on-surface px-5 py-3 rounded-xl hover:border-primary hover:text-primary transition-all shadow-sm"
             >
               <Github className="w-4 h-4 text-primary" />
               <span>GitHub Code Base</span>
@@ -83,45 +82,45 @@ export default function WaveGuardCaseStudy() {
 
         {/* 1. Problem Statement */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-ink tracking-tighter mb-4 border-b border-border pb-3">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
             1. Problem Statement &amp; Mission
           </h2>
-          <div className="space-y-4 text-text-muted text-base sm:text-lg leading-relaxed">
+          <div className="space-y-4 text-on-surface-variant text-base sm:text-lg leading-relaxed">
             <p>
               Coastal fishing communities in Kerala regularly face <em>Kallakkadal</em> — sudden, severe swell surges occurring without local wind activity. These surges destroy moored boats, inundate coastal homes, and endanger lives. Traditional satellite meteorological forecasts provide broad regional alerts but lack the high-frequency localized sensing required for coastal villages.
             </p>
             <p>
-              <strong className="text-ink">The Solution:</strong> WaveGuard is an ocean-deployed buoy system that samples 3-axis IMU acceleration data at 10Hz, processes wave energy metrics at the edge via ESP32 microcontrollers, cross-validates readings against satellite wave models via FastAPI cloud algorithms, and broadcasts bilingual SMS warnings within seconds.
+              <strong className="text-on-surface">The Solution:</strong> WaveGuard is an ocean-deployed buoy system that samples 3-axis IMU acceleration data at 10Hz, processes wave energy metrics at the edge via ESP32 microcontrollers, cross-validates readings against satellite wave models via FastAPI cloud algorithms, and broadcasts bilingual SMS warnings within seconds.
             </p>
           </div>
         </section>
 
         {/* 2. Custom Interactive System Architecture & Telemetry Flow */}
         <section id="architecture" className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-ink tracking-tighter mb-4 border-b border-border pb-3">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
             2. End-to-End System Architecture &amp; Data Pipeline
           </h2>
           
-          <div className="bg-white border border-border rounded-2xl p-6 sm:p-8 shadow-sm mb-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs font-mono text-ink">
-              <div className="bg-bg border border-border p-4 rounded-xl space-y-2">
-                <span className="text-primary-hover font-bold block">1. SENSORS (PHYSICAL)</span>
-                <p className="text-text-muted text-[11px] leading-relaxed">MPU6050 (3-Axis IMU) + NEO-6M GPS over I²C Bus @ 400kHz</p>
+          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 sm:p-8 shadow-sm mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs font-mono text-on-surface">
+              <div className="bg-background border border-outline-variant/30 p-4 rounded-xl space-y-2">
+                <span className="text-primary font-bold block">1. SENSORS (PHYSICAL)</span>
+                <p className="text-on-surface-variant text-[11px] leading-relaxed">MPU6050 (3-Axis IMU) + NEO-6M GPS over I²C Bus @ 400kHz</p>
               </div>
 
-              <div className="bg-bg border border-border p-4 rounded-xl space-y-2">
-                <span className="text-primary-hover font-bold block">2. EDGE FIRMWARE</span>
-                <p className="text-text-muted text-[11px] leading-relaxed">ESP32 (10Hz Sampling · 20-Sample Window Rolling Classification)</p>
+              <div className="bg-background border border-outline-variant/30 p-4 rounded-xl space-y-2">
+                <span className="text-primary font-bold block">2. EDGE FIRMWARE</span>
+                <p className="text-on-surface-variant text-[11px] leading-relaxed">ESP32 (10Hz Sampling · 20-Sample Window Rolling Classification)</p>
               </div>
 
-              <div className="bg-bg border border-border p-4 rounded-xl space-y-2">
-                <span className="text-primary-hover font-bold block">3. CLOUD BACKEND</span>
-                <p className="text-text-muted text-[11px] leading-relaxed">FastAPI REST Server + SQLite Storage + Open-Meteo Fusion</p>
+              <div className="bg-background border border-outline-variant/30 p-4 rounded-xl space-y-2">
+                <span className="text-primary font-bold block">3. CLOUD BACKEND</span>
+                <p className="text-on-surface-variant text-[11px] leading-relaxed">FastAPI REST Server + SQLite Storage + Open-Meteo Fusion</p>
               </div>
 
-              <div className="bg-bg border border-border p-4 rounded-xl space-y-2">
-                <span className="text-primary-hover font-bold block">4. ALERTS &amp; DASHBOARD</span>
-                <p className="text-text-muted text-[11px] leading-relaxed">Direct SIM800L SMS Dispatch + Bilingual React Dashboard</p>
+              <div className="bg-background border border-outline-variant/30 p-4 rounded-xl space-y-2">
+                <span className="text-primary font-bold block">4. ALERTS &amp; DASHBOARD</span>
+                <p className="text-on-surface-variant text-[11px] leading-relaxed">Direct SIM800L SMS Dispatch + Bilingual React Dashboard</p>
               </div>
             </div>
           </div>
@@ -129,7 +128,7 @@ export default function WaveGuardCaseStudy() {
 
         {/* 3. Full Project Gallery */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-ink tracking-tighter mb-4 border-b border-border pb-3">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
             3. Full Project Gallery (Hardware, Team &amp; Dashboards)
           </h2>
 
@@ -140,8 +139,8 @@ export default function WaveGuardCaseStudy() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`text-xs font-mono font-medium px-4 py-2.5 rounded-xl border transition-all ${
                   activeTab === tab.id
-                    ? 'bg-primary-dim border-primary text-ink font-semibold shadow-sm'
-                    : 'bg-white border-border text-text-muted hover:border-border-strong hover:text-ink'
+                    ? 'bg-primary/10 border-primary text-on-surface font-semibold shadow-sm'
+                    : 'bg-surface-container-lowest border-outline-variant/30 text-on-surface-variant hover:border-outline-variant hover:text-on-surface'
                 }`}
               >
                 {tab.label}
@@ -149,7 +148,7 @@ export default function WaveGuardCaseStudy() {
             ))}
           </div>
 
-          <div className="bg-bg-panel2 rounded-2xl overflow-hidden border border-border-strong shadow-inner flex flex-col items-center justify-center min-h-[440px] p-4">
+          <div className="bg-surface-container rounded-2xl overflow-hidden border border-outline-variant shadow-inner flex flex-col items-center justify-center min-h-[440px] p-4">
             <img
               src={currentTab.image}
               alt={currentTab.label}
@@ -158,108 +157,108 @@ export default function WaveGuardCaseStudy() {
               height={500}
               className="w-full h-auto max-h-[620px] object-contain mx-auto rounded-xl shadow-sm"
             />
-            <div className="w-full bg-bg-panel2 border-t border-border px-4 py-3 text-center text-xs font-mono text-text-muted font-medium mt-3">
+            <div className="w-full bg-surface-container border-t border-outline-variant/30 px-4 py-3 text-center text-xs font-mono text-on-surface-variant font-medium mt-3">
               {currentTab.caption}
             </div>
           </div>
         </section>
 
-        {/* 4. Engineering Decisions & Architecture Trade-Offs (#7) */}
+        {/* 4. Engineering Decisions & Architecture Trade-Offs */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-ink tracking-tighter mb-4 border-b border-border pb-3">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
             4. Key Engineering Decisions &amp; Architecture Trade-Offs
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white border border-border rounded-2xl p-6 shadow-sm space-y-2">
-              <h3 className="text-base font-display font-bold text-ink flex items-center gap-2">
-                <HelpCircle className="w-4 h-4 text-primary" />
+            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-2">
+              <h3 className="text-base font-display font-bold text-on-surface flex items-center gap-2">
+                <span className="material-symbols-outlined text-primary text-sm">help</span>
                 <span>Why ESP32 over Arduino / Raspberry Pi?</span>
               </h3>
-              <p className="text-xs text-text-muted leading-relaxed">
+              <p className="text-xs text-on-surface-variant leading-relaxed">
                 Dual-core 240MHz MCU with native FreeRTOS task scheduling, hardware I²C/UART buses, low-power sleep modes, and zero OS latency for continuous 10Hz accelerometer sampling.
               </p>
             </div>
 
-            <div className="bg-white border border-border rounded-2xl p-6 shadow-sm space-y-2">
-              <h3 className="text-base font-display font-bold text-ink flex items-center gap-2">
-                <HelpCircle className="w-4 h-4 text-primary" />
+            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-2">
+              <h3 className="text-base font-display font-bold text-on-surface flex items-center gap-2">
+                <span className="material-symbols-outlined text-primary text-sm">help</span>
                 <span>Why FastAPI over Express / Flask?</span>
               </h3>
-              <p className="text-xs text-text-muted leading-relaxed">
+              <p className="text-xs text-on-surface-variant leading-relaxed">
                 Asynchronous Python ASGI framework handling high-concurrency buoy telemetry ingestion with automatic Pydantic schema validation and zero JSON serialization overhead.
               </p>
             </div>
 
-            <div className="bg-white border border-border rounded-2xl p-6 shadow-sm space-y-2">
-              <h3 className="text-base font-display font-bold text-ink flex items-center gap-2">
-                <HelpCircle className="w-4 h-4 text-primary" />
+            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-2">
+              <h3 className="text-base font-display font-bold text-on-surface flex items-center gap-2">
+                <span className="material-symbols-outlined text-primary text-sm">help</span>
                 <span>Why SQLite over PostgreSQL?</span>
               </h3>
-              <p className="text-xs text-text-muted leading-relaxed">
+              <p className="text-xs text-on-surface-variant leading-relaxed">
                 Embedded zero-latency relational database ideal for single-buoy time-series storage without network database protocol overhead or container memory consumption.
               </p>
             </div>
 
-            <div className="bg-white border border-border rounded-2xl p-6 shadow-sm space-y-2">
-              <h3 className="text-base font-display font-bold text-ink flex items-center gap-2">
-                <HelpCircle className="w-4 h-4 text-primary" />
+            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-2">
+              <h3 className="text-base font-display font-bold text-on-surface flex items-center gap-2">
+                <span className="material-symbols-outlined text-primary text-sm">help</span>
                 <span>Why SIM800L over 4G LTE Modules?</span>
               </h3>
-              <p className="text-xs text-text-muted leading-relaxed">
+              <p className="text-xs text-on-surface-variant leading-relaxed">
                 Cost-effective quad-band 2G GSM transceiver enabling direct SMS alert dispatch to coastal fishermen without depending on offshore high-speed 4G data coverage.
               </p>
             </div>
           </div>
         </section>
 
-        {/* 5. Engineering Challenges & Lessons Learned (#8) */}
+        {/* 5. Engineering Challenges & Lessons Learned */}
         <section id="hardware" className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-ink tracking-tighter mb-4 border-b border-border pb-3">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
             5. Key Engineering Challenges &amp; Lessons Learned
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-white border border-border rounded-2xl p-6 shadow-sm space-y-3">
-              <div className="flex items-center gap-2 text-primary-hover text-xs font-mono font-bold uppercase">
-                <Zap className="w-4 h-4 text-primary" />
+            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-3">
+              <div className="flex items-center gap-2 text-primary text-xs font-mono font-bold uppercase">
+                <span className="material-symbols-outlined text-primary text-sm">bolt</span>
                 <span>SIM800L 2A Burst Current Voltage Spikes</span>
               </div>
-              <h3 className="text-lg font-display font-semibold text-ink">
+              <h3 className="text-lg font-display font-semibold text-on-surface">
                 Problem: ESP32 Brownout Resets
               </h3>
-              <p className="text-xs text-text-muted leading-relaxed">
-                <strong className="text-ink">Initial Attempt:</strong> Powering SIM800L directly from ESP32 3.3V pin.<br/>
-                <strong className="text-ink">Why it Failed:</strong> SIM800L draws up to 2A current bursts during GSM network registration, causing sudden voltage drops below ESP32 operating thresholds.<br/>
-                <strong className="text-ink">Final Fix:</strong> Added an MT3608 Boost Converter stepping battery voltage to 5V, paired with a 1000µF Low-ESR bulk capacitor across SIM800L power rails.
+              <p className="text-xs text-on-surface-variant leading-relaxed">
+                <strong className="text-on-surface">Initial Attempt:</strong> Powering SIM800L directly from ESP32 3.3V pin.<br/>
+                <strong className="text-on-surface">Why it Failed:</strong> SIM800L draws up to 2A current bursts during GSM network registration, causing sudden voltage drops below ESP32 operating thresholds.<br/>
+                <strong className="text-on-surface">Final Fix:</strong> Added an MT3608 Boost Converter stepping battery voltage to 5V, paired with a 1000µF Low-ESR bulk capacitor across SIM800L power rails.
               </p>
             </div>
 
-            <div className="bg-white border border-border rounded-2xl p-6 shadow-sm space-y-3">
-              <div className="flex items-center gap-2 text-primary-hover text-xs font-mono font-bold uppercase">
-                <Activity className="w-4 h-4 text-primary" />
+            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-3">
+              <div className="flex items-center gap-2 text-primary text-xs font-mono font-bold uppercase">
+                <span className="material-symbols-outlined text-primary text-sm">monitoring</span>
                 <span>IMU Motion Noise Calibration</span>
               </div>
-              <h3 className="text-lg font-display font-semibold text-ink">
+              <h3 className="text-lg font-display font-semibold text-on-surface">
                 Problem: Wave Motion Drift
               </h3>
-              <p className="text-xs text-text-muted leading-relaxed">
-                <strong className="text-ink">Initial Attempt:</strong> Instantaneous g-force threshold classification.<br/>
-                <strong className="text-ink">Why it Failed:</strong> Minor boat bumps or passing wake triggered false positive alerts.<br/>
-                <strong className="text-ink">Final Fix:</strong> Programmed ESP32 firmware with a 20-sample rolling window algorithm. Thresholds classify sea state into CALM (&lt;1.0g), WATCH (1.0g–1.8g), and WARNING (&gt;1.8g).
+              <p className="text-xs text-on-surface-variant leading-relaxed">
+                <strong className="text-on-surface">Initial Attempt:</strong> Instantaneous g-force threshold classification.<br/>
+                <strong className="text-on-surface">Why it Failed:</strong> Minor boat bumps or passing wake triggered false positive alerts.<br/>
+                <strong className="text-on-surface">Final Fix:</strong> Programmed ESP32 firmware with a 20-sample rolling window algorithm. Thresholds classify sea state into CALM (&lt;1.0g), WATCH (1.0g–1.8g), and WARNING (&gt;1.8g).
               </p>
             </div>
           </div>
 
           {/* Engineering Code: Firmware Rolling Window */}
-          <div className="bg-ink rounded-2xl p-6 overflow-x-auto my-8">
+          <div className="bg-surface-container rounded-2xl p-6 overflow-x-auto my-8 border border-outline-variant/30">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-3 h-3 rounded-full bg-coral"></span>
               <span className="w-3 h-3 rounded-full bg-amber"></span>
               <span className="w-3 h-3 rounded-full bg-emerald"></span>
-              <span className="text-xs font-mono text-onink-muted ml-2">waveguard_firmware.cpp</span>
+              <span className="text-xs font-mono text-on-surface-variant ml-2">waveguard_firmware.cpp</span>
             </div>
-            <pre className="text-sm font-mono text-onink leading-relaxed"><code>{`// 20-sample rolling window for swell surge detection
+            <pre className="text-sm font-mono text-on-surface leading-relaxed"><code>{`// 20-sample rolling window for swell surge detection
 #define WINDOW_SIZE 20
 float accelBuffer[WINDOW_SIZE];
 int bufferIndex = 0;
@@ -285,14 +284,14 @@ void classifySurge(float avgAccel) {
           </div>
 
           {/* Engineering Code: FastAPI Telemetry Endpoint */}
-          <div className="bg-ink rounded-2xl p-6 overflow-x-auto my-8">
+          <div className="bg-surface-container rounded-2xl p-6 overflow-x-auto my-8 border border-outline-variant/30">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-3 h-3 rounded-full bg-coral"></span>
               <span className="w-3 h-3 rounded-full bg-amber"></span>
               <span className="w-3 h-3 rounded-full bg-emerald"></span>
-              <span className="text-xs font-mono text-onink-muted ml-2">api/telemetry.py</span>
+              <span className="text-xs font-mono text-on-surface-variant ml-2">api/telemetry.py</span>
             </div>
-            <pre className="text-sm font-mono text-onink leading-relaxed"><code>{`@app.post("/api/telemetry")
+            <pre className="text-sm font-mono text-on-surface leading-relaxed"><code>{`@app.post("/api/telemetry")
 async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)):
     """Ingest real-time buoy sensor readings."""
     reading = SensorReading(
@@ -313,40 +312,40 @@ async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)
     return {"status": "recorded", "rolling_avg": avg}`}</code></pre>
           </div>
 
-          <div className="bg-white border border-border rounded-2xl p-6 shadow-sm space-y-3">
-            <h3 className="text-base font-display font-semibold text-ink flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-primary" />
+          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-3">
+            <h3 className="text-base font-display font-semibold text-on-surface flex items-center gap-2">
+              <span className="material-symbols-outlined text-primary text-sm">menu_book</span>
               <span>Core Technical Lessons Learned</span>
             </h3>
-            <ul className="space-y-2 text-xs text-text-muted">
+            <ul className="space-y-2 text-xs text-on-surface-variant">
               <li className="flex items-start gap-2">
                 <span className="text-primary font-mono font-bold">•</span>
-                <span><strong className="text-ink">Decouple High-Peak Current Peripherals:</strong> Always decouple radio transmitters drawing peak currents from sensitive microcontroller logic using boost regulation and bulk capacitors.</span>
+                <span><strong className="text-on-surface">Decouple High-Peak Current Peripherals:</strong> Always decouple radio transmitters drawing peak currents from sensitive microcontroller logic using boost regulation and bulk capacitors.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary font-mono font-bold">•</span>
-                <span><strong className="text-ink">Sliding-Window Filtering:</strong> Environmental time-series data requires rolling window statistical thresholds to prevent false positive triggers.</span>
+                <span><strong className="text-on-surface">Sliding-Window Filtering:</strong> Environmental time-series data requires rolling window statistical thresholds to prevent false positive triggers.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary font-mono font-bold">•</span>
-                <span><strong className="text-ink">Bilingual SMS Character Limits:</strong> Malayalam Unicode SMS messages require strict byte-length counting to prevent splitting alerts into multi-part SMS charges.</span>
+                <span><strong className="text-on-surface">Bilingual SMS Character Limits:</strong> Malayalam Unicode SMS messages require strict byte-length counting to prevent splitting alerts into multi-part SMS charges.</span>
               </li>
             </ul>
           </div>
         </section>
 
-        {/* 6. Academic Team & Attribution (With Framed Team Photo) */}
+        {/* 6. Academic Team & Attribution */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-ink tracking-tighter mb-4 border-b border-border pb-3">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
             6. Academic Project Team &amp; Attribution
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8">
             
-            {/* Framed Team Photo (Preserved photo per user instruction) */}
+            {/* Framed Team Photo */}
             <div className="lg:col-span-6 flex justify-center">
-              <div className="bg-white p-3 rounded-2xl border border-border-strong shadow-md w-full">
-                <div className="relative rounded-xl overflow-hidden bg-bg-panel2 border border-border">
+              <div className="bg-surface-container-lowest p-3 rounded-2xl border border-outline-variant shadow-md w-full">
+                <div className="relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30">
                   <img
                     src={waveGuard.images.team}
                     alt="WaveGuard Academic Project Team at MACE Kothamangalam"
@@ -355,7 +354,7 @@ async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)
                     height={400}
                     className="w-full h-auto max-h-[440px] object-contain mx-auto"
                   />
-                  <div className="bg-ink text-[#f4f1ea] px-4 py-2.5 text-center text-xs font-mono">
+                  <div className="bg-background text-on-background px-4 py-2.5 text-center text-xs font-mono border-t border-outline-variant/30">
                     WaveGuard Project Team at MACE Kothamangalam Campus
                   </div>
                 </div>
@@ -364,30 +363,30 @@ async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)
 
             {/* Team Roles & Metadata */}
             <div className="lg:col-span-6 space-y-4">
-              <div className="bg-white border border-border rounded-2xl p-6 shadow-sm space-y-3 font-mono text-xs">
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-text-faint">PROJECT LEAD</span>
-                  <span className="text-ink font-semibold">Muhammed Ajmal P</span>
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-3 font-mono text-xs">
+                <div className="flex justify-between py-2 border-b border-outline-variant/30">
+                  <span className="text-on-surface-variant">PROJECT LEAD</span>
+                  <span className="text-on-surface font-semibold">Muhammed Ajmal P</span>
                 </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-text-faint">SOFTWARE DEVELOPER</span>
-                  <span className="text-primary-hover font-semibold">Mohammed Shadeed P</span>
+                <div className="flex justify-between py-2 border-b border-outline-variant/30">
+                  <span className="text-on-surface-variant">SOFTWARE DEVELOPER</span>
+                  <span className="text-primary font-semibold">Mohammed Shadeed P</span>
                 </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-text-faint">HARDWARE ENGINEER</span>
-                  <span className="text-ink font-semibold">Sinan Rahman MP</span>
+                <div className="flex justify-between py-2 border-b border-outline-variant/30">
+                  <span className="text-on-surface-variant">HARDWARE ENGINEER</span>
+                  <span className="text-on-surface font-semibold">Sinan Rahman MP</span>
                 </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-text-faint">SOFTWARE DEVELOPER</span>
-                  <span className="text-ink font-semibold">Muhammed Adil PP</span>
+                <div className="flex justify-between py-2 border-b border-outline-variant/30">
+                  <span className="text-on-surface-variant">SOFTWARE DEVELOPER</span>
+                  <span className="text-on-surface font-semibold">Muhammed Adil PP</span>
                 </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-text-faint">FACULTY ADVISER</span>
-                  <span className="text-ink font-semibold">Prof. Eldo P Elias</span>
+                <div className="flex justify-between py-2 border-b border-outline-variant/30">
+                  <span className="text-on-surface-variant">FACULTY ADVISER</span>
+                  <span className="text-on-surface font-semibold">Prof. Eldo P Elias</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span className="text-text-faint">INSTITUTION</span>
-                  <span className="text-ink font-semibold">MACE Kothamangalam CSE</span>
+                  <span className="text-on-surface-variant">INSTITUTION</span>
+                  <span className="text-on-surface font-semibold">MACE Kothamangalam CSE</span>
                 </div>
               </div>
             </div>
@@ -397,7 +396,7 @@ async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)
 
         {/* 7. Future Roadmap */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-ink tracking-tighter mb-4 border-b border-border pb-3">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
             7. Future Engineering Roadmap
           </h2>
           <div className="space-y-3">
@@ -406,8 +405,8 @@ async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)
               "On-Device TinyML Classifier: Deploying quantized TensorFlow Lite models directly on ESP32 microcontrollers for real-time swell classification.",
               "LoRa MESH Networking: Long-range RF communication between multi-buoy arrays along the Kerala coast."
             ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-3 text-sm text-text-muted bg-white border border-border p-4 rounded-xl shadow-sm">
-                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+              <div key={idx} className="flex items-center gap-3 text-sm text-on-surface-variant bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl shadow-sm">
+                <span className="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
                 <span>{item}</span>
               </div>
             ))}

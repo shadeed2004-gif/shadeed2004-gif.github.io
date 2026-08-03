@@ -37,12 +37,12 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-bg text-ink min-h-screen selection:bg-primary selection:text-ink font-sans">
+    <div className="bg-background text-on-background min-h-screen selection:bg-primary-container selection:text-on-background font-body grid-pattern antialiased flex flex-col">
       <a href="#content" className="skip-link">Skip to main content</a>
       <ScrollToTop />
       <Navbar onOpenCommandPalette={() => setCommandPaletteOpen(true)} />
       
-      <React.Suspense fallback={<div className="min-h-screen bg-bg flex items-center justify-center"><span className="text-sm font-mono text-text-muted">Loading…</span></div>}>
+      <React.Suspense fallback={<div className="min-h-screen bg-background flex items-center justify-center"><span className="text-sm font-mono text-on-surface-variant">Loading…</span></div>}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects/waveguard" element={<WaveGuardCaseStudy />} />
