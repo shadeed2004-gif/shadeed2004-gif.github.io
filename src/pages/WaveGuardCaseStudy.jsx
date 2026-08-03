@@ -25,13 +25,13 @@ export default function WaveGuardCaseStudy() {
   const currentTab = galleryTabs.find(t => t.id === activeTab);
 
   return (
-    <main id="content" className="pt-28 pb-24 min-h-screen bg-background">
+    <main id="content" className="pt-36 pb-24 min-h-screen bg-background">
       <div className="max-w-[1140px] mx-auto px-6">
         
         {/* Back Link */}
         <Link
           to="/"
-          className="inline-flex items-center gap-2 font-label-md text-label-md text-on-surface-variant hover:text-primary mb-8 transition-colors"
+          className="inline-flex items-center gap-2 font-label-md text-label-md bg-surface-container-high border border-outline-variant px-4 py-2.5 rounded-lg text-on-surface hover:text-primary hover:border-primary-container transition-all shadow-sm mb-8"
         >
           <span className="material-symbols-outlined text-sm">arrow_back</span>
           <span>Back to Portfolio Overview</span>
