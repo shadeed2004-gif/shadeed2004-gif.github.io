@@ -107,10 +107,21 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="md:col-span-5 flex justify-center relative"
+          className="md:col-span-5 flex justify-center items-center relative"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 blob-shape p-2">
-            <img src="/shadeed-photo-hero.png" alt="Mohammed Shadeed P" className="w-full h-full object-cover rounded-full shadow-lg border-4 border-surface z-10 relative" />
+          <div className="relative w-full max-w-[440px] aspect-[4/5] flex items-end justify-center">
+            {/* Background Orange Graphic Card with Floating Tiles */}
+            <img 
+              src="/hero-bg-card.png" 
+              alt="Design Accent" 
+              className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+            />
+            {/* Cutout Portrait */}
+            <img 
+              src="/shadeed-photo-hero.png" 
+              alt="Mohammed Shadeed P" 
+              className="relative z-10 w-[92%] h-auto object-contain drop-shadow-2xl" 
+            />
           </div>
         </motion.div>
 
