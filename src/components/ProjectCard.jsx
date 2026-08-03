@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ArrowUpRight } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ProjectCard({ project }) {
@@ -74,7 +74,7 @@ export default function ProjectCard({ project }) {
               className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-primary hover:underline"
             >
               <span>Explore WaveGuard Case Study</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <span className="material-symbols-outlined text-sm">open_in_new</span>
             </Link>
           ) : (
             <a

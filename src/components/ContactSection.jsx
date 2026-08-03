@@ -48,7 +48,7 @@ export default function ContactSection() {
               className="inline-flex items-center gap-2.5 bg-surface border border-outline-variant text-on-surface hover:text-primary hover:border-primary-container transition-colors rounded-lg font-label-md px-5 py-3.5 shadow-sm hover:-translate-y-0.5 min-h-[44px]"
             >
               <span className="material-symbols-outlined text-primary text-sm">mail</span>
-              <span>mohammedshadeedp@gmail.com</span>
+              <span className="break-all sm:break-normal">mohammedshadeedp@gmail.com</span>
             </a>
 
             <a

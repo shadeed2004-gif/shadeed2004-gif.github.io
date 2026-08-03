@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
 
           {/* Name Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display text-display text-on-background tracking-tightest leading-[0.98] mb-4 uppercase font-bold">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display text-display text-on-background tracking-tightest leading-[0.98] mb-4 uppercase font-bold">
             MOHAMMED SHADEED P
           </h1>
 
