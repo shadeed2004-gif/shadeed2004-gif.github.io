@@ -31,29 +31,29 @@ export default function WaveGuardCaseStudy() {
         {/* Back Link */}
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-xs font-mono text-on-surface-variant hover:text-primary mb-8 transition-colors"
+          className="inline-flex items-center gap-2 font-label-md text-label-md text-on-surface-variant hover:text-primary mb-8 transition-colors"
         >
           <span className="material-symbols-outlined text-sm">arrow_back</span>
           <span>Back to Portfolio Overview</span>
         </Link>
 
         {/* Hero Banner */}
-        <div className="bg-gradient-to-br from-surface-container-lowest to-surface-container border border-outline-variant rounded-3xl p-8 sm:p-12 mb-12 shadow-md text-on-surface">
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <span className="text-xs font-mono text-primary font-semibold uppercase tracking-wider bg-amber-100 border border-amber-300 text-amber-700 px-3 py-1 rounded-full">
-              Flagship Engineering Case Study
+        <div className="glass-card p-8 sm:p-12 mb-12 shadow-sm text-on-surface">
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+            <span className="tech-badge">
+              ★ FLAGSHIP ENGINEERING CASE STUDY
             </span>
-            <span className="text-xs font-mono text-emerald font-semibold bg-emerald/10 border border-emerald/30 px-3 py-1 rounded-full flex items-center gap-2">
+            <span className="inline-flex items-center gap-2 text-xs font-code text-emerald font-semibold bg-emerald/10 border border-emerald/30 px-3 py-1 rounded-full">
               <span className="w-2 h-2 rounded-full bg-emerald animate-pulse"></span>
               Physical Prototype Built &amp; Tested
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-on-surface tracking-tightest mb-6">
+          <h1 className="font-display text-headline-lg sm:text-display text-on-surface tracking-tightest mb-6">
             WaveGuard: Embedded Coastal Early Warning Buoy
           </h1>
 
-          <p className="text-on-surface-variant text-lg sm:text-xl max-w-4xl leading-relaxed mb-8">
+          <p className="font-body-lg text-on-surface-variant max-w-4xl leading-relaxed mb-8">
             An autonomous smart buoy &amp; cloud analytics platform designed to detect <em>Kallakkadal</em> (abnormal swell surges) along the Kanayannur coastal zone of Kerala and dispatch instantaneous SMS warnings to fishing communities.
           </p>
 
@@ -82,14 +82,12 @@ export default function WaveGuardCaseStudy() {
 
         {/* 1. Problem Statement */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
-            1. Problem Statement &amp; Mission
-          </h2>
-          <div className="space-y-4 text-on-surface-variant text-base sm:text-lg leading-relaxed">
-            <p>
+          <div className="section-label">1. Problem Statement &amp; Mission</div>
+          <div className="glass-card p-6 sm:p-8 space-y-4">
+            <p className="font-body-lg text-on-surface-variant leading-relaxed">
               Coastal fishing communities in Kerala regularly face <em>Kallakkadal</em> — sudden, severe swell surges occurring without local wind activity. These surges destroy moored boats, inundate coastal homes, and endanger lives. Traditional satellite meteorological forecasts provide broad regional alerts but lack the high-frequency localized sensing required for coastal villages.
             </p>
-            <p>
+            <p className="font-body-lg text-on-surface-variant leading-relaxed">
               <strong className="text-on-surface">The Solution:</strong> WaveGuard is an ocean-deployed buoy system that samples 3-axis IMU acceleration data at 10Hz, processes wave energy metrics at the edge via ESP32 microcontrollers, cross-validates readings against satellite wave models via FastAPI cloud algorithms, and broadcasts bilingual SMS warnings within seconds.
             </p>
           </div>
@@ -97,28 +95,26 @@ export default function WaveGuardCaseStudy() {
 
         {/* 2. Custom Interactive System Architecture & Telemetry Flow */}
         <section id="architecture" className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
-            2. End-to-End System Architecture &amp; Data Pipeline
-          </h2>
+          <div className="section-label">2. End-to-End System Architecture &amp; Data Pipeline</div>
           
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 sm:p-8 shadow-sm mb-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs font-mono text-on-surface">
-              <div className="bg-background border border-outline-variant/30 p-4 rounded-xl space-y-2">
+          <div className="glass-card p-6 sm:p-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 font-code text-xs text-on-surface">
+              <div className="bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl space-y-2">
                 <span className="text-primary font-bold block">1. SENSORS (PHYSICAL)</span>
                 <p className="text-on-surface-variant text-[11px] leading-relaxed">MPU6050 (3-Axis IMU) + NEO-6M GPS over I²C Bus @ 400kHz</p>
               </div>
 
-              <div className="bg-background border border-outline-variant/30 p-4 rounded-xl space-y-2">
+              <div className="bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl space-y-2">
                 <span className="text-primary font-bold block">2. EDGE FIRMWARE</span>
                 <p className="text-on-surface-variant text-[11px] leading-relaxed">ESP32 (10Hz Sampling · 20-Sample Window Rolling Classification)</p>
               </div>
 
-              <div className="bg-background border border-outline-variant/30 p-4 rounded-xl space-y-2">
+              <div className="bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl space-y-2">
                 <span className="text-primary font-bold block">3. CLOUD BACKEND</span>
                 <p className="text-on-surface-variant text-[11px] leading-relaxed">FastAPI REST Server + SQLite Storage + Open-Meteo Fusion</p>
               </div>
 
-              <div className="bg-background border border-outline-variant/30 p-4 rounded-xl space-y-2">
+              <div className="bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl space-y-2">
                 <span className="text-primary font-bold block">4. ALERTS &amp; DASHBOARD</span>
                 <p className="text-on-surface-variant text-[11px] leading-relaxed">Direct SIM800L SMS Dispatch + Bilingual React Dashboard</p>
               </div>
@@ -128,9 +124,7 @@ export default function WaveGuardCaseStudy() {
 
         {/* 3. Full Project Gallery */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
-            3. Full Project Gallery (Hardware, Team &amp; Dashboards)
-          </h2>
+          <div className="section-label">3. Full Project Gallery (Hardware, Team &amp; Dashboards)</div>
 
           <div className="flex flex-wrap gap-2 mb-6">
             {galleryTabs.map((tab) => (
@@ -165,12 +159,10 @@ export default function WaveGuardCaseStudy() {
 
         {/* 4. Engineering Decisions & Architecture Trade-Offs */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
-            4. Key Engineering Decisions &amp; Architecture Trade-Offs
-          </h2>
+          <div className="section-label">4. Key Engineering Decisions &amp; Architecture Trade-Offs</div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-2">
+            <div className="glass-card p-6 space-y-2">
               <h3 className="text-base font-display font-bold text-on-surface flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary text-sm">help</span>
                 <span>Why ESP32 over Arduino / Raspberry Pi?</span>
@@ -180,7 +172,7 @@ export default function WaveGuardCaseStudy() {
               </p>
             </div>
 
-            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-2">
+            <div className="glass-card p-6 space-y-2">
               <h3 className="text-base font-display font-bold text-on-surface flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary text-sm">help</span>
                 <span>Why FastAPI over Express / Flask?</span>
@@ -190,7 +182,7 @@ export default function WaveGuardCaseStudy() {
               </p>
             </div>
 
-            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-2">
+            <div className="glass-card p-6 space-y-2">
               <h3 className="text-base font-display font-bold text-on-surface flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary text-sm">help</span>
                 <span>Why SQLite over PostgreSQL?</span>
@@ -200,7 +192,7 @@ export default function WaveGuardCaseStudy() {
               </p>
             </div>
 
-            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-2">
+            <div className="glass-card p-6 space-y-2">
               <h3 className="text-base font-display font-bold text-on-surface flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary text-sm">help</span>
                 <span>Why SIM800L over 4G LTE Modules?</span>
@@ -214,13 +206,11 @@ export default function WaveGuardCaseStudy() {
 
         {/* 5. Engineering Challenges & Lessons Learned */}
         <section id="hardware" className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
-            5. Key Engineering Challenges &amp; Lessons Learned
-          </h2>
+          <div className="section-label">5. Key Engineering Challenges &amp; Lessons Learned</div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-3">
-              <div className="flex items-center gap-2 text-primary text-xs font-mono font-bold uppercase">
+            <div className="glass-card p-6 space-y-3">
+              <div className="flex items-center gap-2 text-primary text-xs font-code font-bold uppercase">
                 <span className="material-symbols-outlined text-primary text-sm">bolt</span>
                 <span>SIM800L 2A Burst Current Voltage Spikes</span>
               </div>
@@ -234,8 +224,8 @@ export default function WaveGuardCaseStudy() {
               </p>
             </div>
 
-            <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-3">
-              <div className="flex items-center gap-2 text-primary text-xs font-mono font-bold uppercase">
+            <div className="glass-card p-6 space-y-3">
+              <div className="flex items-center gap-2 text-primary text-xs font-code font-bold uppercase">
                 <span className="material-symbols-outlined text-primary text-sm">monitoring</span>
                 <span>IMU Motion Noise Calibration</span>
               </div>
@@ -336,15 +326,13 @@ async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)
 
         {/* 6. Academic Team & Attribution */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
-            6. Academic Project Team &amp; Attribution
-          </h2>
+          <div className="section-label">6. Academic Project Team &amp; Attribution</div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8">
             
             {/* Framed Team Photo */}
             <div className="lg:col-span-6 flex justify-center">
-              <div className="bg-surface-container-lowest p-3 rounded-2xl border border-outline-variant shadow-md w-full">
+              <div className="glass-card p-3 w-full">
                 <div className="relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30">
                   <img
                     src={waveGuard.images.team}
@@ -354,7 +342,7 @@ async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)
                     height={400}
                     className="w-full h-auto max-h-[440px] object-contain mx-auto"
                   />
-                  <div className="bg-background text-on-background px-4 py-2.5 text-center text-xs font-mono border-t border-outline-variant/30">
+                  <div className="bg-background text-on-background px-4 py-2.5 text-center font-code text-xs border-t border-outline-variant/30">
                     WaveGuard Project Team at MACE Kothamangalam Campus
                   </div>
                 </div>
@@ -363,7 +351,7 @@ async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)
 
             {/* Team Roles & Metadata */}
             <div className="lg:col-span-6 space-y-4">
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-6 shadow-sm space-y-3 font-mono text-xs">
+              <div className="glass-card p-6 space-y-3 font-code text-xs">
                 <div className="flex justify-between py-2 border-b border-outline-variant/30">
                   <span className="text-on-surface-variant">PROJECT LEAD</span>
                   <span className="text-on-surface font-semibold">Muhammed Ajmal P</span>
@@ -396,16 +384,14 @@ async def ingest_telemetry(data: TelemetryPayload, db: Session = Depends(get_db)
 
         {/* 7. Future Roadmap */}
         <section className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-display font-bold text-on-surface tracking-tighter mb-4 border-b border-outline-variant/30 pb-3">
-            7. Future Engineering Roadmap
-          </h2>
+          <div className="section-label">7. Future Engineering Roadmap</div>
           <div className="space-y-3">
             {[
               "Offshore Solar Buoy Enclosure: Waterproof IP68 buoy casing with integrated solar panel charging circuit.",
               "On-Device TinyML Classifier: Deploying quantized TensorFlow Lite models directly on ESP32 microcontrollers for real-time swell classification.",
               "LoRa MESH Networking: Long-range RF communication between multi-buoy arrays along the Kerala coast."
             ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-3 text-sm text-on-surface-variant bg-surface-container-lowest border border-outline-variant/30 p-4 rounded-xl shadow-sm">
+              <div key={idx} className="glass-card p-4 flex items-center gap-3 font-body-md text-sm text-on-surface-variant">
                 <span className="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
                 <span>{item}</span>
               </div>
