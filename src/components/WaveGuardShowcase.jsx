@@ -62,20 +62,20 @@ export default function WaveGuardShowcase() {
               <div className="pt-4">
                 <Link
                   to="/projects/waveguard"
-                  className="inline-flex items-center gap-2.5 bg-primary-container text-on-primary-container px-6 py-3.5 rounded-xl font-label-md font-bold hover:bg-primary hover:text-on-primary transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 group min-h-[44px]"
+                  className="inline-flex items-center gap-2 sm:gap-2.5 bg-primary-container text-on-primary-container px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl font-label-md font-bold hover:bg-primary hover:text-on-primary transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 group min-h-[44px] text-sm sm:text-base"
                 >
-                  <span>Explore Dedicated Case Study Page</span>
+                  <span>Explore Case Study</span>
                   <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </Link>
               </div>
             </div>
 
             {/* Right column */}
-            <div className="relative w-full h-72 sm:h-96 lg:h-full min-h-[320px] overflow-hidden bg-surface-container">
+            <div className="relative w-full h-80 sm:h-[420px] lg:h-full min-h-[320px] overflow-hidden bg-surface-container">
               <img 
                 src={waveGuard.images.solobuoy} 
                 alt="Mohammed Shadeed P holding the WaveGuard Buoy Prototype" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top lg:object-center"
                 loading="lazy"
               />
             </div>
