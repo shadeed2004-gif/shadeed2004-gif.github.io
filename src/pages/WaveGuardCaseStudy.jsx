@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 
@@ -118,6 +118,15 @@ export default function WaveGuardCaseStudy() {
             >
               <Github className="w-4 h-4 text-primary" />
               <span>GitHub Code Base</span>
+            </a>
+            <a 
+              href="https://www.linkedin.com/feed/update/urn:li:activity:7482131940612046848/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-on-surface/20 text-on-surface font-semibold hover:border-primary hover:text-primary-dark transition-colors shadow-sm bg-surface-container-lowest"
+            >
+              <Linkedin className="w-4 h-4 text-primary" />
+              <span>LinkedIn Project Post</span>
             </a>
           </div>
 
