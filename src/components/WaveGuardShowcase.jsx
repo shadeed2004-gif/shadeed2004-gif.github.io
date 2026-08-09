@@ -62,10 +62,10 @@ export default function WaveGuardShowcase() {
               <div className="pt-4">
                 <Link
                   to="/projects/waveguard"
-                  className="text-primary font-label-md hover:text-primary-container transition-colors group inline-flex items-center gap-2"
+                  className="inline-flex items-center gap-2.5 bg-primary-container text-on-primary-container px-6 py-3.5 rounded-xl font-label-md font-bold hover:bg-primary hover:text-on-primary transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 group min-h-[44px]"
                 >
                   <span>Explore Dedicated Case Study Page</span>
-                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </Link>
               </div>
             </div>
