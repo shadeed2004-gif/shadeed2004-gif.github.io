@@ -71,11 +71,11 @@ export default function WaveGuardShowcase() {
             </div>
 
             {/* Right column */}
-            <div className="bg-surface-container flex items-center justify-center p-3 sm:p-6 lg:p-0 min-h-[320px] sm:min-h-[400px] lg:min-h-full">
+            <div className="relative w-full h-72 sm:h-96 lg:h-full min-h-[320px] overflow-hidden bg-surface-container">
               <img 
                 src={waveGuard.images.solobuoy} 
                 alt="Mohammed Shadeed P holding the WaveGuard Buoy Prototype" 
-                className="w-full h-full max-h-[520px] object-contain sm:object-cover rounded-xl lg:rounded-none"
+                className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
             </div>
