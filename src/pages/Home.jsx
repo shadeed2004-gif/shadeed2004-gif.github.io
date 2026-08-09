@@ -16,7 +16,7 @@ export default function Home() {
 
       {/* Problem & Approach */}
       <section id="about" className="py-xl border-t border-outline-variant/30">
-        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-8 lg:px-margin-desktop">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export default function Home() {
 
       {/* Skills */}
       <section id="skills" className="py-xl border-t border-outline-variant/30">
-        <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-7xl mx-auto px-margin-mobile md:px-8 lg:px-margin-desktop">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -7,7 +7,7 @@ export default function WaveGuardShowcase() {
 
   return (
     <section id="flagship" className="py-xl border-y border-outline-variant/30 relative">
-      <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+      <div className="max-w-7xl mx-auto px-margin-mobile md:px-8 lg:px-margin-desktop">
         
         {/* Section Head */}
         <div className="max-w-2xl mb-12">

@@ -57,7 +57,7 @@ export default function Navbar({ onOpenCommandPalette }) {
         ? 'shadow-sm py-1.5' 
         : 'py-2.5'
     }`}>
-      <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop h-14 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-margin-mobile md:px-8 lg:px-margin-desktop h-14 flex items-center justify-between">
         {/* Home Button (Removed Logo Image) */}
         <Link 
           to="/" 
@@ -74,7 +74,7 @@ export default function Navbar({ onOpenCommandPalette }) {
         </Link>
 
         {/* Desktop Nav Links with Active Section Highlight */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => {
             const isActive = location.pathname === '/' && activeSection === link.id;
             return (
@@ -116,7 +116,7 @@ export default function Navbar({ onOpenCommandPalette }) {
         </nav>
 
         {/* Mobile Toggle */}
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-3 lg:hidden">
           <button
             onClick={onOpenCommandPalette}
             className="p-2 rounded-lg hover:bg-primary/5 transition-colors text-primary flex items-center justify-center min-h-[44px] min-w-[44px]"
@@ -136,7 +136,7 @@ export default function Navbar({ onOpenCommandPalette }) {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-surface-container/95 backdrop-blur-xl border-b border-outline-variant/30 px-6 py-4 flex flex-col gap-3 shadow-md">
+        <div className="lg:hidden bg-surface-container/95 backdrop-blur-xl border-b border-outline-variant/30 px-6 py-4 flex flex-col gap-3 shadow-md">
           {navLinks.map((link) => (
             <a
               key={link.name}

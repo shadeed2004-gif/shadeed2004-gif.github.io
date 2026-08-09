@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[92vh] pt-32 pb-16 flex items-center overflow-hidden">
-      <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-margin-mobile md:px-8 lg:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         
         {/* Copy Column */}
         <motion.div 
