@@ -54,11 +54,11 @@ export default function Navbar({ onOpenCommandPalette }) {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform-gpu bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 ${
       scrolled 
-        ? 'shadow-sm py-3' 
-        : 'py-5'
+        ? 'shadow-sm py-1.5' 
+        : 'py-2.5'
     }`}>
-      <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop h-20 flex items-center justify-between">
-        {/* Brand Logo - Go Back to Home */}
+      <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop h-14 flex items-center justify-between">
+        {/* Home Button (Removed Logo Image) */}
         <Link 
           to="/" 
           onClick={() => {
@@ -66,15 +66,11 @@ export default function Navbar({ onOpenCommandPalette }) {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }
           }}
-          className="flex items-center gap-3 group min-h-[44px]"
+          className="font-label-md text-label-md bg-surface-container-high border border-outline-variant px-3.5 py-1.5 rounded-lg text-on-surface hover:text-primary hover:border-primary-container transition-all flex items-center gap-2 shadow-sm group min-h-[38px]"
           title="Go to Home"
         >
-          <img 
-            src="/shadeed-logo.png" 
-            alt="shadeed." 
-            className="h-10 w-10 object-contain rounded-lg transition-transform group-hover:scale-[1.02]"
-          />
-          <span className="font-headline-md text-headline-md text-on-surface font-bold tracking-tight hidden sm:block">Shadeed</span>
+          <span className="material-symbols-outlined text-base text-primary group-hover:scale-110 transition-transform">home</span>
+          <span className="font-bold tracking-tight text-on-surface">Home</span>
         </Link>
 
         {/* Desktop Nav Links with Active Section Highlight */}
