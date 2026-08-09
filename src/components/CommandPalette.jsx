@@ -77,7 +77,7 @@ export default function CommandPalette({ isOpen, onClose }) {
         
         {/* Search Input */}
         <div className="flex items-center px-4 border-b border-outline-variant/30 bg-surface-container">
-          <span className="material-symbols-outlined text-on-surface-variant mr-3">search</span>
+          <span className="material-symbols-outlined text-on-surface-variant mr-3" aria-hidden="true">search</span>
           <input
             type="text"
             value={query}
@@ -88,7 +88,7 @@ export default function CommandPalette({ isOpen, onClose }) {
             autoFocus
           />
           <button onClick={onClose} className="p-1 text-on-surface-variant hover:text-on-surface">
-            <span className="material-symbols-outlined">close</span>
+             <span className="material-symbols-outlined" aria-hidden="true">close</span>
           </button>
         </div>
 
@@ -107,7 +107,7 @@ export default function CommandPalette({ isOpen, onClose }) {
                   className="w-full flex items-center justify-between px-3 py-3 rounded-xl hover:bg-primary/5 text-left transition-colors group"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-primary">{cmd.icon}</span>
+                    <span className="material-symbols-outlined text-primary" aria-hidden="true">{cmd.icon}</span>
                     <span className="text-sm text-on-surface font-mono group-hover:text-primary font-medium">{cmd.name}</span>
                   </div>
                   <span className="text-[10px] font-mono uppercase bg-surface-container border border-outline-variant/30 px-2 py-0.5 rounded text-on-surface-variant">

@@ -7,7 +7,7 @@ export default function SkillGrid() {
       {skillCategories.map((cat) => (
         <div key={cat.title} className="glass-card p-6">
           <div className="flex items-center gap-3.5 mb-5">
-            <span className="material-symbols-outlined text-3xl text-primary">{cat.icon}</span>
+            <span className="material-symbols-outlined text-3xl text-primary" aria-hidden="true">{cat.icon}</span>
             <h3 className="font-headline-md text-on-surface">
               {cat.title}
             </h3>

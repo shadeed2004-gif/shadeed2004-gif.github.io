@@ -73,7 +73,7 @@ export default function WaveGuardCaseStudy() {
           to="/"
           className="group inline-flex items-center gap-2 px-4 py-2.5 mb-8 rounded-full border border-on-surface/20 text-sm font-label-md font-medium hover:bg-primary hover:border-primary hover:text-on-surface transition-all shadow-sm"
         >
-          <span className="material-symbols-outlined text-base group-hover:-translate-x-1 transition-transform">arrow_back</span>
+          <span className="material-symbols-outlined text-base group-hover:-translate-x-1 transition-transform" aria-hidden="true">arrow_back</span>
           <span>Back to Portfolio Overview</span>
         </Link>
 
@@ -108,7 +108,7 @@ export default function WaveGuardCaseStudy() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-on-surface font-semibold hover:bg-primary-dark transition-colors shadow-sm"
             >
               Visit Live Web Dashboard
-              <span className="material-symbols-outlined text-lg">open_in_new</span>
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">open_in_new</span>
             </a>
             <a 
               href="https://github.com/shadeed2004-gif/waveguard" 
@@ -160,7 +160,7 @@ export default function WaveGuardCaseStudy() {
                 { icon: 'dashboard', title: '6. Dashboard', desc: 'Live public + admin view' }
               ].map((step, idx) => (
                 <div key={idx} className="glass-hover bg-surface-container-lowest rounded-2xl border border-outline-variant/30 p-4 text-center">
-                  <span className="material-symbols-outlined text-primary-dark text-2xl">{step.icon}</span>
+                  <span className="material-symbols-outlined text-primary-dark text-2xl" aria-hidden="true">{step.icon}</span>
                   <p className="text-xs font-semibold mt-2 text-on-surface">{step.title}</p>
                   <p className="text-[11px] text-on-surface-variant mt-1 leading-tight">{step.desc}</p>
                 </div>
@@ -280,21 +280,21 @@ export default function WaveGuardCaseStudy() {
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-on-surface-variant mb-4">7. Engineering Challenges &amp; Decisions</p>
           <div className="glass-card rounded-3xl p-8 space-y-6">
             <div className="flex gap-4">
-              <span className="material-symbols-outlined text-primary-dark shrink-0">cable</span>
+              <span className="material-symbols-outlined text-primary-dark shrink-0" aria-hidden="true">cable</span>
               <div>
                 <p className="font-semibold text-on-surface mb-1">GSM/GPS UART Sharing</p>
                 <p class="text-sm text-on-surface-variant leading-relaxed">SIM800L and NEO-6M both need UART — required careful pin allocation and baud matching on the ESP32 to avoid bus contention.</p>
               </div>
             </div>
             <div className="flex gap-4">
-              <span className="material-symbols-outlined text-primary-dark shrink-0">balance</span>
+              <span className="material-symbols-outlined text-primary-dark shrink-0" aria-hidden="true">balance</span>
               <div>
                 <p className="font-semibold text-on-surface mb-1">Threshold Calibration</p>
                 <p className="text-sm text-on-surface-variant leading-relaxed">Wave-state thresholds were tuned iteratively against bench-shaken IMU data, with 1g gravity subtraction and moving-average smoothing added to cut false triggers.</p>
               </div>
             </div>
             <div className="flex gap-4">
-              <span className="material-symbols-outlined text-primary-dark shrink-0">wifi</span>
+              <span className="material-symbols-outlined text-primary-dark shrink-0" aria-hidden="true">wifi</span>
               <div>
                 <p className="font-semibold text-on-surface mb-1">Telemetry Reliability</p>
                 <p className="text-sm text-on-surface-variant leading-relaxed">WiFi/HTTP telemetry to the FastAPI backend, with SQLite persistence and a React dashboard for live and historical viewing.</p>
@@ -348,15 +348,15 @@ export default function WaveGuardCaseStudy() {
           <div className="glass-card rounded-3xl p-8">
             <ul className="space-y-3 text-sm text-on-surface-variant leading-relaxed">
               <li className="flex gap-3">
-                <span className="material-symbols-outlined text-base text-primary-dark shrink-0">radio_button_unchecked</span>
+                <span className="material-symbols-outlined text-base text-primary-dark shrink-0" aria-hidden="true">radio_button_unchecked</span>
                 <span>SMS/GSM alert delivery is designed into the architecture but not yet wired end-to-end — a planned integration on top of the existing SIM800L hardware, not a shipped feature.</span>
               </li>
               <li className="flex gap-3">
-                <span className="material-symbols-outlined text-base text-primary-dark shrink-0">radio_button_unchecked</span>
+                <span className="material-symbols-outlined text-base text-primary-dark shrink-0" aria-hidden="true">radio_button_unchecked</span>
                 <span>Testing so far is bench-based; no open-water validation yet.</span>
               </li>
               <li className="flex gap-3">
-                <span className="material-symbols-outlined text-base text-primary-dark shrink-0">radio_button_unchecked</span>
+                <span className="material-symbols-outlined text-base text-primary-dark shrink-0" aria-hidden="true">radio_button_unchecked</span>
                 <span>Patent exploration underway — strongest candidate is a multi-buoy TDOA wave-direction method.</span>
               </li>
             </ul>

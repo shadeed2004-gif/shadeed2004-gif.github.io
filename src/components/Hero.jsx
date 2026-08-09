@@ -63,7 +63,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-label-md font-bold hover:bg-primary hover:text-on-primary transition-colors shadow-md hover:-translate-y-0.5"
             >
               <span>Explore WaveGuard Flagship</span>
-              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+              <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
             </Link>
 
             <a
@@ -72,7 +72,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-surface text-primary border border-outline-variant px-6 py-3 rounded-lg font-label-md font-bold hover:bg-surface-variant transition-colors shadow-sm hover:-translate-y-0.5"
             >
-              <span className="material-symbols-outlined text-sm">download</span>
+              <span className="material-symbols-outlined text-sm" aria-hidden="true">download</span>
               <span>Download Resume</span>
             </a>
 

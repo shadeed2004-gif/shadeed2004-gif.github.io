@@ -14,7 +14,7 @@ export default function ResumePage() {
           to="/"
           className="inline-flex items-center gap-2 font-label-md text-label-md bg-surface-container-high border border-outline-variant px-4 py-2.5 rounded-lg text-on-surface hover:text-primary hover:border-primary-container transition-all shadow-sm mb-8"
         >
-          <span className="material-symbols-outlined text-sm">arrow_back</span>
+          <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_back</span>
           <span>Back to Portfolio Overview</span>
         </Link>
 
@@ -32,7 +32,7 @@ export default function ResumePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-sans font-semibold bg-primary-container text-on-primary-container px-6 py-3 rounded-xl hover:bg-primary hover:text-on-primary transition-all shadow-sm"
           >
-            <span className="material-symbols-outlined text-sm">download</span>
+            <span className="material-symbols-outlined text-sm" aria-hidden="true">download</span>
             <span>Download PDF Resume</span>
           </a>
         </div>

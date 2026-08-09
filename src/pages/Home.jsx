@@ -45,21 +45,21 @@ export default function Home() {
                 </div>
                 <div className="space-y-6">
                   <div className="flex gap-4">
-                    <span className="material-symbols-outlined text-primary text-3xl">memory</span>
+                    <span className="material-symbols-outlined text-primary text-3xl" aria-hidden="true">memory</span>
                     <div>
                       <h4 className="font-label-md text-on-surface">Edge Computing</h4>
                       <p className="text-sm text-on-surface-variant">Firmware on constrained MCUs</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <span className="material-symbols-outlined text-primary text-3xl">cloud_sync</span>
+                    <span className="material-symbols-outlined text-primary text-3xl" aria-hidden="true">cloud_sync</span>
                     <div>
                       <h4 className="font-label-md text-on-surface">Data Pipelines</h4>
                       <p className="text-sm text-on-surface-variant">Scalable backend APIs & telemetry</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <span className="material-symbols-outlined text-primary text-3xl">devices</span>
+                    <span className="material-symbols-outlined text-primary text-3xl" aria-hidden="true">devices</span>
                     <div>
                       <h4 className="font-label-md text-on-surface">Full-Stack Dashboards</h4>
                       <p className="text-sm text-on-surface-variant">Interactive & bilingual React interfaces</p>

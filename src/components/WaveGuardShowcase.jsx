@@ -65,7 +65,7 @@ export default function WaveGuardShowcase() {
                   className="inline-flex items-center gap-2 sm:gap-2.5 bg-primary-container text-on-primary-container px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl font-label-md font-bold hover:bg-primary hover:text-on-primary transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 group min-h-[44px] text-sm sm:text-base"
                 >
                   <span>Explore Case Study</span>
-                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
                 </Link>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function WaveGuardShowcase() {
         {/* "What Makes This Different?" Comparison Table */}
         <div className="mb-8 pt-6 border-t border-outline-variant/30">
           <span className="text-xs font-mono text-primary uppercase tracking-wider font-bold mb-4 flex items-center gap-2">
-            <span className="material-symbols-outlined text-sm">compare_arrows</span>
+            <span className="material-symbols-outlined text-sm" aria-hidden="true">compare_arrows</span>
             <span>What Makes WaveGuard Different?</span>
           </span>
 
@@ -148,7 +148,7 @@ export default function WaveGuardShowcase() {
 
             <div className="glass-card border-primary/30 p-5 space-y-2">
               <span className="text-primary font-mono font-bold uppercase tracking-wider block flex items-center gap-1.5">
-                <span className="material-symbols-outlined text-sm">verified_user</span>
+                <span className="material-symbols-outlined text-sm" aria-hidden="true">verified_user</span>
                 WaveGuard Platform Difference
               </span>
               <ul className="space-y-1.5 text-on-surface font-medium">

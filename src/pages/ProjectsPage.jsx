@@ -16,7 +16,7 @@ export default function ProjectsPage() {
           to="/"
           className="inline-flex items-center gap-2 font-label-md text-label-md bg-surface-container-high border border-outline-variant px-4 py-2.5 rounded-lg text-on-surface hover:text-primary hover:border-primary-container transition-all shadow-sm mb-8"
         >
-          <span className="material-symbols-outlined text-sm">arrow_back</span>
+          <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_back</span>
           <span>Back to Portfolio Overview</span>
         </Link>
 

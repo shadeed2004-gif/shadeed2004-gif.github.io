@@ -40,7 +40,7 @@ export default function ArticlesSection() {
                   className="inline-flex items-center gap-1.5 text-primary font-label-md hover:text-primary-container transition-colors"
                 >
                   <span>Read Engineering Note</span>
-                  <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
                 </Link>
               </div>
             </div>

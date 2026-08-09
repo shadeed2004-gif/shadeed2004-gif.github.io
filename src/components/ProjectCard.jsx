@@ -74,7 +74,7 @@ export default function ProjectCard({ project }) {
               className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-primary hover:underline"
             >
               <span>Explore WaveGuard Case Study</span>
-              <span className="material-symbols-outlined text-sm">open_in_new</span>
+              <span className="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span>
             </Link>
           ) : (
             <a

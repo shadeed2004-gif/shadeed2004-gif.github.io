@@ -69,7 +69,7 @@ export default function Navbar({ onOpenCommandPalette }) {
           className="font-label-md text-label-md bg-surface-container-high border border-outline-variant px-3.5 py-1.5 rounded-lg text-on-surface hover:text-primary hover:border-primary-container transition-all flex items-center gap-2 shadow-sm group min-h-[38px]"
           title="Go to Home"
         >
-          <span className="material-symbols-outlined text-base text-primary group-hover:scale-110 transition-transform">home</span>
+          <span className="material-symbols-outlined text-base text-primary group-hover:scale-110 transition-transform" aria-hidden="true">home</span>
           <span className="font-bold tracking-tight text-on-surface">Home</span>
         </Link>
 
@@ -101,7 +101,7 @@ export default function Navbar({ onOpenCommandPalette }) {
             className="p-2 rounded-lg hover:bg-primary/5 transition-colors text-primary flex items-center justify-center min-h-[44px]"
             title="Search command palette (Ctrl+K)"
           >
-            <span className="material-symbols-outlined">terminal</span>
+            <span className="material-symbols-outlined" aria-hidden="true">terminal</span>
           </button>
 
           {/* Resume CTA */}
@@ -122,14 +122,14 @@ export default function Navbar({ onOpenCommandPalette }) {
             className="p-2 rounded-lg hover:bg-primary/5 transition-colors text-primary flex items-center justify-center min-h-[44px] min-w-[44px]"
             aria-label="Search"
           >
-            <span className="material-symbols-outlined">terminal</span>
+            <span className="material-symbols-outlined" aria-hidden="true">terminal</span>
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-on-surface-variant hover:text-on-surface min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <span className="material-symbols-outlined">close</span> : <span className="material-symbols-outlined">menu</span>}
+            {mobileMenuOpen ? <span className="material-symbols-outlined" aria-hidden="true">close</span> : <span className="material-symbols-outlined" aria-hidden="true">menu</span>}
           </button>
         </div>
       </div>

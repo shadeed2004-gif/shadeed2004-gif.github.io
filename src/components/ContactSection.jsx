@@ -15,7 +15,7 @@ export default function ContactSection() {
         <div className="glass-card p-8 sm:p-14 text-center">
           
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 px-3.5 py-1.5 rounded-full text-xs font-mono text-on-surface font-semibold mb-6">
-            <span className="material-symbols-outlined text-primary text-sm">schedule</span>
+            <span className="material-symbols-outlined text-primary text-sm" aria-hidden="true">schedule</span>
             <span>Replies within 24–48 hours</span>
           </div>
 
@@ -29,13 +29,13 @@ export default function ContactSection() {
 
           <div className="max-w-xl mx-auto bg-surface border border-outline-variant/30 rounded-2xl p-4 mb-10 text-left">
             <span className="text-[11px] font-mono text-primary font-bold uppercase tracking-wider mb-2.5 text-center flex items-center justify-center gap-1.5">
-              <span className="material-symbols-outlined text-primary text-sm">my_location</span>
+              <span className="material-symbols-outlined text-primary text-sm" aria-hidden="true">my_location</span>
               Currently Seeking Opportunities In
             </span>
             <div className="space-y-2">
               {targetRoles.map((role, idx) => (
                 <div key={idx} className="flex items-center gap-2 text-xs text-on-surface font-medium bg-surface-container-lowest p-2.5 rounded-xl border border-outline-variant/30">
-                  <span className="material-symbols-outlined text-primary text-base flex-shrink-0">check_circle</span>
+                  <span className="material-symbols-outlined text-primary text-base flex-shrink-0" aria-hidden="true">check_circle</span>
                   <span>{role}</span>
                 </div>
               ))}
@@ -47,7 +47,7 @@ export default function ContactSection() {
               href="mailto:mohammedshadeedp@gmail.com"
               className="inline-flex items-center gap-2.5 bg-surface border border-outline-variant text-on-surface hover:text-primary hover:border-primary-container transition-colors rounded-lg font-label-md px-5 py-3.5 shadow-sm hover:-translate-y-0.5 min-h-[44px]"
             >
-              <span className="material-symbols-outlined text-primary text-sm">mail</span>
+              <span className="material-symbols-outlined text-primary text-sm" aria-hidden="true">mail</span>
               <span className="break-all sm:break-normal">mohammedshadeedp@gmail.com</span>
             </a>
 
@@ -55,7 +55,7 @@ export default function ContactSection() {
               href="tel:+919656457874"
               className="inline-flex items-center gap-2.5 bg-surface border border-outline-variant text-on-surface hover:text-primary hover:border-primary-container transition-colors rounded-lg font-label-md px-5 py-3.5 shadow-sm hover:-translate-y-0.5 min-h-[44px]"
             >
-              <span className="material-symbols-outlined text-primary text-sm">phone</span>
+              <span className="material-symbols-outlined text-primary text-sm" aria-hidden="true">phone</span>
               <span>+91 96564 57874</span>
             </a>
 
@@ -85,7 +85,7 @@ export default function ContactSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary px-6 py-3.5 rounded-lg font-label-md transition-all shadow-md hover:-translate-y-0.5 min-h-[44px]"
             >
-              <span className="material-symbols-outlined text-sm">description</span>
+              <span className="material-symbols-outlined text-sm" aria-hidden="true">description</span>
               <span>Download Resume PDF ↓</span>
             </a>
           </div>

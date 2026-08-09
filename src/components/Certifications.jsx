@@ -44,14 +44,14 @@ export default function Certifications() {
         {/* Key Achievements Summary Block */}
         <div className="glass-card p-7 mb-8">
           <div className="flex items-center gap-2.5 mb-5 text-primary font-mono text-xs font-bold uppercase tracking-wider">
-            <span className="material-symbols-outlined text-primary">verified_user</span>
+            <span className="material-symbols-outlined text-primary" aria-hidden="true">verified_user</span>
             <span>Key Engineering Achievements</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {keyAchievements.map((item, idx) => (
               <div key={idx} className="flex items-start gap-2.5 text-xs text-on-surface font-medium bg-surface-container-lowest border border-outline-variant/30 p-3.5 rounded-xl shadow-sm">
-                <span className="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5">check_circle</span>
+                <span className="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5" aria-hidden="true">check_circle</span>
                 <span>{item}</span>
               </div>
             ))}
