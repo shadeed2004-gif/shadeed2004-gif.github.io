@@ -113,7 +113,8 @@ export default function Hero() {
             {/* Background Orange Graphic Card with Floating Tiles - Enlarged */}
             <img 
               src="/hero-bg-card.png" 
-              alt="Design Accent" 
+              alt="" 
+              aria-hidden="true"
               className="absolute inset-0 w-full h-full object-contain pointer-events-none scale-110 sm:scale-125 origin-center transition-transform"
             />
             {/* Cutout Portrait */}

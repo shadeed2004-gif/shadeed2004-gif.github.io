@@ -58,6 +58,7 @@ export default {
           DEFAULT: "#10b981",
           dim: "rgba(16, 185, 129, 0.12)",
         },
+        "coral": "#ff6b6b",
       },
       fontFamily: {
         display: ['Roboto', 'sans-serif'],
